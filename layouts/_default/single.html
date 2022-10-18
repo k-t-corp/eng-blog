@@ -1,0 +1,35 @@
+{{ define "main" }}
+<article class="box:border-box pt:32">
+    <header class="mb:32">
+        <div class="font:40 font:extrabold">{{ .Title }}</div>
+        <div class="mt:16 f:fade-60">
+            {{- if isset .Params "date" -}}
+            {{ if eq .Lastmod .Date }}
+            <time>{{ .Date | time.Format (":date_medium") }}</time>
+            {{ else }}
+            <time>{{ .Lastmod | time.Format (":date_medium") }}</time>
+            {{ end }}
+            {{- end -}}
+        </div>
+    </header>
+    {{- partial "prose.html" . -}}
+    <footer>
+        <script src="https://giscus.app/client.js"
+            data-repo="k-t-corp/eng-blog"
+            data-repo-id="R_kgDOIPm17Q"
+            data-category="Announcements"
+            data-category-id="DIC_kwDOIPm17c4CSCnE"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="top"
+            data-theme="dark"
+            data-lang="en"
+            crossorigin="anonymous"
+            async>
+        </script>
+        <noscript>Please enable JavaScript to view the comments powered by giscus.</noscript>
+    </footer>
+</article>
+{{ end }}
