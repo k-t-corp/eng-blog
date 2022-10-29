@@ -2,4 +2,4 @@ baseURL = 'http://blog.ktachibana.party/'
 languageCode = 'en-us'
 title = 'The tech behind K T Corp.'
 theme = "holy"
-timeZone = America/Los_Angeles
+timeZone = "America/Los_Angeles"
