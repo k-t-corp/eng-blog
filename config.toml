@@ -1,4 +1,4 @@
-baseURL = 'http://blog.ktachibana.party/'
+baseURL = 'https://blog.ktachibana.party/'
 languageCode = 'en-us'
 title = 'The tech behind K T Corp.'
 theme = "holy"
